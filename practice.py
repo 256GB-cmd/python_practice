@@ -233,3 +233,96 @@ print(number_list)
 #순서 뒤집기 ㄱㄴ
 number_list.reverse() #12345를 54321로 바꾸기
 print(number_list)
+
+#모두 지우기
+number_list.clear()
+print(number_list)
+
+#다앵한 자료형과 함께사용
+number_list = [5,2,4,3,1]
+mix_list = ["조세호", 20, True]
+print(mix_list)
+
+#리스트 확장
+number_list.extend(mix_list)
+print(number_list)
+    #사전-----------------------------------------------------------------------------------------
+cabinet = {3:"유재석", 100:"김태호"} # (key : value)
+print(cabinet[3])  
+#할당되지않은 수를 괄호에 적으면 오류가 나며 프로그램이 종료됨
+
+print(cabinet.get(100))
+#None 출력 후 프로그램이 게속 진행됨
+
+print(cabinet.get(1, "사용 가능")) 
+#할당되지않은 값 뒤에 뭔갈 붙여 None이 아닌 다른 문자 출력 가능
+
+print(3 in cabinet)
+# True  | 3이란 키가 있는가?
+
+print(6 in cabinet)
+# False | 5라는 키가 있는가
+
+cabinet = {"A-3":"유재석", "B-100":"김태호"} 
+#key가 문자형이여도됨
+
+        #새손님
+print(cabinet)
+cabinet["A-3"] = "김종국"
+cabinet["C-20"] = "조세호" # 새로운값이면 추가, 원래 있던 값은 업데이트
+print(cabinet)
+
+        #간손님
+del cabinet["A-3"] #del로 원하는 key 삭제 가능
+print(cabinet)     
+
+        #key 들만 출력
+print(cabinet.keys()) #무슨 key가 있는지 알려줌
+
+        #value 들만 출력
+print(cabinet.values()) #무슨 value가 있는지 알려줌
+
+        #key,value 쌍으로 출력
+print(cabinet.items())
+
+        #모든 값 삭제
+cabinet.clear()
+print(cabinet)
+    #튜플------------------------------------------------------------------------------------
+#내용 변경,추가 불가능 /list보다 속도가 빠름
+menu = ("돈가스", "치즈가스")
+print(menu[0])
+print(menu[1])
+
+name = "김종국"
+age = 20
+hobby = "코딩"          
+print(name, age, hobby)
+
+#튜플 이용시 위 코드를 한번에 출력 ㄱㄴ
+(name, age, hobby) = ("김종국", 20, "코딩")
+print(name, age, hobby)
+    #세트-------------------------------------------------------------------------------------
+# 집합(set)
+# 중복 안됨, 순서 업음
+my_set = {1,2,3,3,3}
+print(my_set) #중복은 하나만 출력됨
+
+java = {"유재석", "김태호", "양세형"}
+python = set(["유재석", "박명수"])
+
+#교집합 (java와 pythin을 모두 할수있는 개발자)
+print(java & python)
+print(java.intersection(python))
+
+#합집합 (java도 할수있거나 python도 할수있는 개발자)
+print(java | python)  
+print(java.union(python))
+
+#차집합 (java는 할수있지만, python은 할줄 모르는 개발자
+print(java - python)
+print(java.difference(python))
+
+#python을 할줄 아는 사람이 늘어남
+python.add("김태호")
+print(python)
