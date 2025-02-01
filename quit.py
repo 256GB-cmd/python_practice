@@ -20,4 +20,11 @@ count2 = hjkl.count("e")
 good = "!"
 
 print(f"생성된 비밀번호 : {qwer}{count}{count2}{good}")
+#옯은답_________________________________________________________
+url = "http://naver.com"
+my_str = url.replace("http://", "")
+my_str = my_str[:my_str.index(".")]
+password = my_str[:3] + str(len(my_str)) + str(my_str.count("e")) + "!"
+
+print(f"{url}의 비밀번호는 {password} 입니다")
 

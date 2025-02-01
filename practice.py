@@ -194,3 +194,42 @@ print("Red Apple\rPine") # \r: 커서를 맨앞으로이동
 print("Redd\bApple") # \b : 백스페이스 (한글자 삭제)
 
 print("Red\tApple") #\t : 탭 
+    #리스트-------------------------------------------------------------------------------------
+# 지하철 칸 별로 10,20,30
+subway = 10
+subway2 = 20
+subway3 = 30
+
+subwayzero = [10, 20, 30] #리스트를 사용해 비슷한것을 하나로 묶어줌
+
+subwayzero = ["유재석", "조세호", "박명수"]
+print(subwayzero)
+
+#조세호가 몇번째 칸에 타고있는가?
+print(subwayzero.index("조세호")) # 1번째
+
+#하하가 다음 정류정에서 다음 칸에 탐
+subwayzero.append("하하") #append == 맨뒤에 추가
+print(subwayzero)
+
+#정형돈이 유재석/조세호 사이에 탐
+subwayzero.insert(1, "정형돈") #(추가할 위치, 추가할 사람)
+print(subwayzero)
+
+#지하철에 있는 사람을 한 명씩 뒤에서 꺼냄
+print(subwayzero.pop()) #맨뒤 사람을 한명씩 꺼냄
+print(subwayzero)       #여러번 써서 여러명을 꺼낼수있음
+
+#같은 이름을 가진사람이 몇명인지 확인하기
+subwayzero.append("유재석") # ->유재석을 2명으로 만들기
+print(subwayzero)
+print(subwayzero.count("유재석"))  #-> 유재석이 몇명인지 세기
+
+#정렬도 ㄱㄴ
+number_list = [5,2,4,3,1]
+number_list.sort() #sort ==정렬한다는 의미
+print(number_list) 
+
+#순서 뒤집기 ㄱㄴ
+number_list.reverse() #12345를 54321로 바꾸기
+print(number_list)
